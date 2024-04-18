@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<section class="bg-images" style="background-image: url('/images/our-collections/collection-banner.png');">
+<section class="bg-images" style="background-image: url('/images/our-collections/collection-banner.jpg');">
     <div class="bg-shadow-1 h-90vh">
         <div class="container-fluid">
             <div class="h-90vh d-flex align-items-center justify-content-center">
@@ -30,7 +30,7 @@
                         <div class="col-md-12 mt-30" data-aos="zoom-in-up">
                             <a href="<%= show_product_path(data) %>">
                                 <div class="position-relative">
-                                    <img src="<%= data.image_url(:medium) %>" class="w-100p">
+                                    <img src="<%= data.image_url(:medium) %>" class="w-100p br-10" loading="lazy" alt="product-banner">
                                     <div class="collection-position"></div>
                                     <div class="heading-8 white fs-14-mob position-4 text-upper">
                                         <%= data.name %>
@@ -43,7 +43,7 @@
                         <div class="col-md-6 col-6 mt-30" data-aos="zoom-in">
                             <a href="<%= show_product_path(data) %>">
                                 <div class="position-relative">
-                                    <img src="<%= data.image2_url(:medium) %>" class="w-100p">
+                                    <img src="<%= data.image2_url(:medium) %>" class="w-100p br-10" loading="lazy" alt="product-banner">
                                     <div class="collection-position"></div>
                                     <div class="heading-8 white fs-14-mob position-4 text-upper">
                                         <%= data.name %>
@@ -56,7 +56,7 @@
                         <div class="col-md-6 col-6 mt-30" data-aos="zoom-out">
                             <a href="<%= show_product_path(data) %>">
                                 <div class="position-relative">
-                                    <img src="<%= data.image2_url(:medium) %>" class="w-100p">
+                                    <img src="<%= data.image2_url(:medium) %>" class="w-100p br-10" loading="lazy" alt="product-banner">
                                     <div class="collection-position"></div>
                                     <div class="heading-8 white fs-14-mob position-4 text-upper">
                                         <%= data.name %>

@@ -3,8 +3,8 @@
 <section class="py-50 py-20-mob zoom">
     <div class="container">
         <div class="image-container mt-50 mt-0-mob" data-aos="zoom-in">
-            <div class="background-gradient"></div>
-            <img src="<%= @blog.image_url(:medium) %>" class="w-100p" alt="Image with background gradient">
+            <div class="background-gradient br-10"></div>
+            <img src="<%= @blog.image_url(:medium) %>" loading="lazy" alt="blog-show-image" class="w-100p br-10" alt="Image with background gradient">
             <div style="z-index: 111;" class="position-5">
                 <div class="heading-2 text-upper fs-16-mob" >
                     <%= @blog.title %>
@@ -77,7 +77,7 @@
                 <div class="item">
                     <a href="<%= show_blog_path(data) %>">
                         <div class="">
-                            <img src="<%= data.image_url(:medium) %>" class="w-100p">
+                            <img src="<%= data.image_url(:medium) %>" alt="blog-show-img" class="w-100p br-10" loading="lazy">
                         </div>
                         <div class="mt-30">
                             <div class="border-3"></div>
@@ -99,7 +99,7 @@
                             <div class="mt-15">
                                 <div class="d-flex align-items-center">
                                     <div>
-                                        <img src="<%= data.author.image_url(:medium) %>" style="width: 25px;">
+                                        <img src="<%= data.author.image_url(:medium) %>" alt="blog-show-img1" style="width: 25px;" class="br-10" loading="lazy">
                                     </div>
                                     <div class="ml-2">
                                         <div class="heading-3 black-1 fs-12">

@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<section class="bg-images" style="background-image: url('/images/blogs/blog-banner.png');">
+<section class="bg-images" style="background-image: url('/images/blogs/blog-banner.jpg');">
 	<div class="bg-shadow-1 h-90vh h-80vh-lg h-80vh-md h-80vh-mob">
 		<div class="container-fluid">
 			<div class="h-90vh h-80vh-lg h-80vh-md h-80vh-mob d-flex align-items-center justify-content-center">
@@ -29,7 +29,7 @@
 					<div class="<% if index + 1 > 1 %>mt-30<% end %>" data-aos="<% if (index + 1) % 2 == 0 %>fade-up<% else %>fade-down<% end %>">
 						<div class="">
 							<a href="<%= show_blog_path(data) %>">
-							<img src="<%= data.image_url(:medium) %>" class="w-100p">
+							<img src="<%= data.image_url(:medium) %>" loading="lazy" alt="blog-images" class="w-100p br-10">
 							</a>
 						</div>
 						<div class="mt-15">
@@ -73,7 +73,7 @@
 							<div class="item">
 								<a href="<%= show_blog_path(data) %>">
 									<div class="">
-										<img src="<%= data.image_url(:medium) %>" class="w-100p">
+										<img src="<%= data.image_url(:medium) %>" loading="lazy" alt="blog-carousel" class="w-100p br-10">
 									</div>
 									<div class="mt-30">
 										<div class="border-3"></div>
@@ -95,7 +95,7 @@
 										<div class="mt-15">
 											<div class="d-flex align-items-center">
 												<div>
-													<img src="<%= data.author.image_url(:medium) %>" style="width: 25px;">
+													<img src="<%= data.author.image_url(:medium) %>" loading="lazy" alt="blog-carousel-images" style="width: 25px;" class="br-10">
 												</div>
 												<div class="ml-2">
 													<div class="heading-3 black-1 fs-12">
@@ -289,8 +289,8 @@
 
 					}
 			});
-			$(".blog-owl .owl-nav .owl-prev").html('<img src="/images/blogs/blog-arrow-left.png" class="w-40px">');
-			$(".blog-owl .owl-nav .owl-next").html('<img src="/images/blogs/blog-arrow-right.png" class="w-40px">');
+			$(".blog-owl .owl-nav .owl-prev").html('<img src="/images/blogs/blog-arrow-left.png" loading="lazy" alt="blog-arrow" class="w-40px">');
+			$(".blog-owl .owl-nav .owl-next").html('<img src="/images/blogs/blog-arrow-right.png" loading="lazy" alt="blog-arrow" class="w-40px">');
 	});
 </script>
 

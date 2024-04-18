@@ -36,6 +36,7 @@
                                         <th>Phone Number</th>
                                         <th>Address</th>
                                         <th>Country</th>
+                                        <th>Company Name</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -59,6 +60,7 @@
 												<td><%= data.phone %></td>
 												<td><%= data.address %></td>
 												<td><%= data.country %></td>
+												<td><%= data.company_name %></td>
 												<td>
 													<% if can? :update, @vendor_registrations %>
                                                         <% if data.status == false %>

@@ -7,8 +7,8 @@
           <div class="nav-item tab-head <% if index == 0 %>active-tab<% end %>" data-aos="fade-right">
             <a class="nav-link <% if index == 0 %>active<% end %>" data-toggle="tab" href="#tab-<%= index + 1 %>" role="tab">
               <span>
-                <img src="/images/home-page/tab-img.png" class="w-25px mr-2 tab-img-1">
-                <img src="/images/home-page/pro-hover.png" class="w-25px mr-2 tab-img-2 d-none">
+                <img src="/images/home-page/tab-img.png" alt="product-icon" class="w-25px mr-2 tab-img-1" loading="lazy">
+                <img src="/images/home-page/pro-hover.png" alt="product-hover-icon" class="w-25px mr-2 tab-img-2 d-none" loading="lazy">
                 <%= data.name %>
               </span>
             </a>
@@ -26,7 +26,7 @@
           <div class="row">
             <% @images.each do |i| %>
               <div class="col-md-4 mt-30">
-                <div><img src="<%= i.image_url(:medium) %>" class="w-100"></div>
+                <div><img src="<%= i.image_url(:small) %>" class="w-100 br-10" alt="product-home-images" loading="lazy"></div>
               </div>
             <% end %>
           </div>

@@ -86,3 +86,4 @@ rails g model VendorRegistration image_data:text first_name last_name email phon
 rails generate mailer VendorRegistrationMailer
 rails generate mailer VendorRegistrationSuccessMailer
 rails g scaffold admin/VendorRegistration
+rails g migration AddCompanyNameToVendorRegistration company_name

@@ -242,6 +242,7 @@ class HomesController < ApplicationController
     phone = params['phone']
     address = params['address']
     country = params['country']
+    company_name = params['company_name']
     image = params['image']
 
     VendorRegistration.create(
@@ -251,11 +252,12 @@ class HomesController < ApplicationController
       phone: phone,
       address: address,
       country: country,
+      company_name: company_name,
       image: image,
     )
 
     VendorRegistrationMailer.send_mail(
-      fname, lname, email, phone, address, country
+      fname, lname, email, phone, address, country, company_name
     ).deliver_later
 
     VendorRegistrationSuccessMailer.send_mail(

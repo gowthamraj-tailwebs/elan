@@ -13,7 +13,6 @@
                     </div>
                     <div data-aos="fade-up" class="mt-30 w-70p w-90p-mob mx-auto fs-14-mob heading-3 white text-center">
                         <%= @category.description %>
-                        It is a long established fact that a reader will be distracted by the of readable content of a page.
                     </div>
                 </div>
             </div>
@@ -50,7 +49,7 @@
         <div class="row">
             <% @category.category_images.each do |data| %>
                 <div class="col-md-6 col-6 mt-30" data-aos="zoom-in">
-                    <img src="<%= data.image_url(:medium)%>" class="w-100p">
+                    <img src="<%= data.image_url(:medium)%>" class="w-100p br-10" loading="lazy" alt="product-main-images">
                 </div>
             <% end %>
         </div>

@@ -10,6 +10,7 @@ class VendorRegistrationMailer < ApplicationMailer
         @phone = phone
         @address = address
         @country = country
+        @company_name = company_name
 
         mail(to: [info_email, vedika_email], subject: subject)
     end
