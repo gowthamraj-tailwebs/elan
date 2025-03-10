@@ -32,6 +32,7 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Mobile</th>
+                                        <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -43,6 +44,7 @@
 												<td><%= data.name %></td>
 												<td><%= data.email %></td>
 												<td><%= data.mobile %></td>
+												<td><%= data.created_at.present? ? data.created_at.strftime("%d-%m-%Y") : '' %></td>
 												<td>
 													<% if can? :update, @inquiries %>
                                                         <% if data.status == false %>
