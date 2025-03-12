@@ -40,7 +40,7 @@
 										<% @newsletters.each do |data| %>
 											<tr>
 												<td><%= data.email %></td>
-                                                <td><%= data.created_at.present? ? data.created_at.strftime("%d-%m-%Y") : '' %></td>
+                                                <td><%= formatted_date2(data.created_at) %></td>
 												<td>
 													<% if can? :update, @newsletters %>
                                                         <% if data.active == false %>

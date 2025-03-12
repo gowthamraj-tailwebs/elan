@@ -8,8 +8,10 @@ module ApplicationHelper
 
 	# Nov 03, 2023
 	def formatted_date2 datetime
-		if datetime
-            datetime.strftime("%b %d, %Y")
+		if datetime.present?
+            return datetime.strftime("%b %d, %Y")
+		else
+			return nil
 		end
 	end
 

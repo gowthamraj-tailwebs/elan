@@ -48,7 +48,7 @@
 												<td><%= data.phone %></td>
 												<td><%= data.service %></td>
 												<td><%= data.message %></td>
-                                                <td><%= data.created_at.present? ? data.created_at.strftime("%d-%m-%Y") : '' %></td>
+                                                <td><%= formatted_date2(data.created_at) %></td>
 												<td>
 													<% if can? :update, @book_services %>
                                                         <% if data.status == false %>

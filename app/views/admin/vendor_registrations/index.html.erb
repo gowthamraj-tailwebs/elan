@@ -62,7 +62,7 @@
 												<td><%= data.address %></td>
 												<td><%= data.country %></td>
 												<td><%= data.company_name %></td>
-                                                <td><%= data.created_at.present? ? data.created_at.strftime("%d-%m-%Y") : '' %></td>
+                                                <td><%= formatted_date2(data.created_at) %></td>
 												<td>
 													<% if can? :update, @vendor_registrations %>
                                                         <% if data.status == false %>
